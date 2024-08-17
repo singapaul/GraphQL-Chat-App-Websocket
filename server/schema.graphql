@@ -1,0 +1,18 @@
+type Query {
+  messages: [Message!]
+}
+
+type Mutation {
+  addMessage(text: String!): Message
+}
+
+# this is a top level type along with Query & Mutation
+type Subscription {
+  messageAdded: Message
+}
+type Message {
+  id: ID!
+  user: String!
+  text: String!
+}
+
